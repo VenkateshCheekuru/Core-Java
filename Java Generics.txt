@@ -1,0 +1,32 @@
+/*Write a  generics class  with two type parameters*/
+ 
+public class MySimpleTwoGenerics {
+ 
+    public static void main(String a[]){
+         
+        SimpleGen<String, Integer> sample
+                    = new SimpleGen<String, Integer>("TCS-ANZ", 100);
+        sample.printTypes();
+    }
+}
+ 
+
+ //Simple generics class with two type parameters U, V. 
+
+class SimpleGen<U, V>{
+  
+    private U objU;
+    
+    private V objV;
+     
+    
+    public SimpleGen(U objU, V objV){
+        this.objU = objU;
+        this.objV = objV;
+    }
+     
+    public void printTypes(){
+        System.out.println("U Type: "+this.objU.getClass().getName());
+        System.out.println("V Type: "+this.objV.getClass().getName());
+    }
+}

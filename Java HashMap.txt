@@ -1,0 +1,50 @@
+
+
+/*How to iterate through HashMap*/
+
+
+import java.util.HashMap;
+import java.util.Set;
+ 
+public class MyHashMapRead {
+    public static void main(String a[]){
+        HashMap<String, String> hm = new HashMap<String, String>();
+        
+        hm.put("first", "FIRST INSERTED");
+        hm.put("second", "SECOND INSERTED");
+        hm.put("third","THIRD INSERTED");
+
+        System.out.println(hm);
+        Set<String> keys = hm.keySet();
+
+        for(String key: keys){
+            System.out.println("Value of "+key+" is: "+hm.get(key));
+        }
+    }
+}
+
+
+
+
+/*How to copy Map content to another HashMap*/
+ 
+import java.util.HashMap;
+ 
+public class MyHashMapCopy {
+ 
+    public static void main(String a[]){
+        HashMap<String, String> hm = new HashMap<String, String>();
+        
+        hm.put("first", "Cheekuru");
+        hm.put("second", "Naidu");
+        hm.put("third","Lally");
+        System.out.println(hm);
+        HashMap<String, String> subMap = new HashMap<String, String>();
+
+        subMap.put("s1", "S1 VALUE");
+        subMap.put("s2", "S2 VALUE");
+        hm.putAll(subMap);
+
+        System.out.println(hm);
+    }
+}
